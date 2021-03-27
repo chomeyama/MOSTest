@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>MOS Test</title>
+    </head>
+
+    <body>
+
+        <!-- 注意書きなど -->
+        <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
+            <p>
+                <h1>MOS Test</h1>
+
+                Thank you for your cooperation in my experiment.</br>
+                This experiment is MOS test.</br>
+                Listen to the voices and give it the score you think it deserves.</br>
+                I will explain the experimental procedure.
+
+                <h2>Experimental Procedure</h2>
+                <ol>
+                    <li>Enter your name and select the set list number from 1 to 10.</li>
+                    <li>Press "Start Experiment" button.</li>
+                    <li>Listen to the voices and give it the score you think it deserves.<br>
+                        The evaluation criteria is sound quality.</li>
+                    <li>Press "next" button and start next evaluation.</li>
+                    <li>When you finish this experiment, press "finish" button and download the result.<br>
+                        Send it to slack or the following email address.</li>
+                    <li>Email address: yoneyama.reo@g.sp.m.is.nagoya-u.ac.jp</font></li>
+                </ol>
+
+                <h2>Notes</h2>
+                <ul>
+                    <li>This experiment takes about 30 minutes.</li>
+                    <li>Please do not update the page during this experiment.</li>
+                    <li>You may not be able to download the results on your phone, so please use your PC.</li>
+                    <li>Please use headphones for this experiment.</li>
+                </ul>
+
+                <h2>実験手順</h2>
+                <ol>
+                    <li>名前を入力し、1から10までのセット番号を選んで下さい。</li>
+                    <li>"Start Experiment"を押して下さい。</li>
+                    <li>音声を聴き、相応しいと思った評価を選択して下さい。<br>
+                        評価基準は<b>音質</b>です。</li>
+                    <li>選択を終えたら"next"ボタンを押し、次の実験に進んで下さい。</li>
+                    <li>評価実験を全て終えたら"finish"ボタンを押して結果をダウンロードして下さい。<br>
+                        結果はSlackか下記のメールアドレスに送信して下さい。</li>
+                    <li>Emailアドレス: yoneyama.reo@g.sp.m.is.nagoya-u.ac.jp</font></li>
+                </ol>
+
+                <h2>注意</h2>
+                <ul>
+                    <li>この実験は凡そ30分ほど要します。</li>
+                    <li>実験中はページの再読み込みは行わないで下さい。</li>
+                    <li>スマートフォンでは結果をダウンロードできない場合があるのでPCを使用して下さい。</li>
+                    <li>ヘッドホンやイヤホンを着用した状態で行って下さい。</li>
+                </ul>
+            </p>
+        </div>
+
+        <script type="text/javascript" src="mos.js"></script>
+
+        <div id="Display1">
+            <p> Your name: <br>
+            <input type="text" id="name" value=""></p>
+            <p> Setlist number: <br>
+            <label><input type="radio" name="set" id="number" value="1">1</label><br>
+            <label><input type="radio" name="set" id="number" value="2">2</label><br>
+            <label><input type="radio" name="set" id="number" value="3">3</label><br>
+            <label><input type="radio" name="set" id="number" value="4">4</label><br>
+            <label><input type="radio" name="set" id="number" value="5">5</label><br>
+            <label><input type="radio" name="set" id="number" value="6">6</label><br>
+            <label><input type="radio" name="set" id="number" value="7">7</label><br>
+            <label><input type="radio" name="set" id="number" value="8">8</label><br>
+            <label><input type="radio" name="set" id="number" value="9">9</label><br>
+            <label><input type="radio" name="set" id="number" value="10">10</label><br>
+            <p>
+            <button id="next1" onclick="start_experiment()">next</button>
+            </p>
+        </div>
+
+
+        <div id="Display2" style="display:none;">
+        <!-- 注意書きなど <body onload="init()"> -->
+            <p id="page"></p>
+            <p id="audio"></p>
+            <p>
+            <label><input type="radio" name="eval" onclick="evaluation()">Excellent</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Good</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Fair</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Poor</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">Bad</label><br>
+        </p>
+
+        <p>
+        <button id="prev" onclick="prev()">prev</button>
+        <button id="next2" onclick="next()">next</button>
+        <button id="finish" onclick="finish()">finish</button>
+        </p>
+
+
+    </body>
+
+</html>
