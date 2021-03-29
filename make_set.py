@@ -2,7 +2,7 @@ import os
 import shutil
 
 wav_root = '../wav/'
-METHOD = ['natural', 'world', 'nsf', 'qppwg', 'usfg']
+METHOD = ['natural', 'world', 'nsf', 'qppwg', 'usfgan']
 SPK = ['bdl', 'clb', 'rms', 'slt']
 N_SET = 15
 N_DATA_PER_SPK = 4
