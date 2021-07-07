@@ -1,26 +1,26 @@
 # MOSTest
 
-## Simple explanation of this opensource code (mainly for my lab members).
+## Simple explanation of this opensource code
 
-1. Create wav directory like below. Each set contains wav files and their file lists for the methods you want to compare. The number of methods in each set does not have to match.
+1. Create wav directory like the below example. Each set contains wav files and their file lists for the methods you want to compare. It's easier to understand if you actually browse the wav directory. The number of methods in each set does not have to match.
 
 ```
 wav/
  |---- set1/
  |      |-- method1/
+ |      |-- method1.list
+ |
+ |---- set2
  |      |-- method2/
  |      |-- method3/
- |      |-- method1.list
  |      |-- method2.list
  |      |-- method3.list
  |
- |---- set2
- |      |-- method1/
- |      |-- method2/
- |      |-- method1.list
- |      |-- method2.list
- |
  |---- set3
+ |      |-- method4/
+ |      |-- method5/
+ |      |-- method4.list
+ |      |-- method5.list
  ```
 
 2. Rewrite mos.js depending on the structure of the wav directory. You only need to customize the part from line 60.
