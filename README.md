@@ -1,6 +1,6 @@
 # MOSTest
 
-## Simple explanation of this opensource code
+## Simple explanation of this opensource (mainly for my lab members)
 
 1. Create wav directory like the below example. Each set contains wav files and their file lists for the methods you want to compare. It's easier to understand if you actually browse the wav directory. The number of methods in each set does not have to match.
 
@@ -21,6 +21,7 @@ wav/
  |      |-- method5/
  |      |-- method4.list
  |      |-- method5.list
+ |
  ```
 
 2. Rewrite mos.js depending on the structure of the wav directory. You only need to customize the part from line 60.
@@ -31,4 +32,4 @@ wav/
 
 If you want to conduct tests other than a MOS test, you need to modify the code significantly depending on the test.
 
-Please feel free to ask any questions you may have by slack or in person.
+Please feel free to ask any questions you may have on slack or in person.
