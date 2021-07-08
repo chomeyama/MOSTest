@@ -55,10 +55,14 @@ function start_experiment() {
     }
 
     // convert display
-    Display()
+    Display();
 
-    // you only have to customize this part
     var method_paths = [];
+    /*
+        you have to customize this part
+        this is an example which enables each set
+        includes different number of methods.
+    */
     if (set_num == "1") {
         method_paths.push(wav_dir + "set" + set_num + "/natural.list");
     } else if (set_num == "2") {
@@ -68,12 +72,15 @@ function start_experiment() {
         method_paths.push(wav_dir + "set" + set_num + "/qppwg.list");
         method_paths.push(wav_dir + "set" + set_num + "/usfgan.list");
     }
+    /*
+        end
+    */
 
     file_list = makeFileList(method_paths);
     outfile = name + "_set" + set_num + ".csv";
     scores = (new Array(file_list.length)).fill(0);
     eval = document.getElementsByName("eval");
-    init()
+    init();
 }
 
 // convert display
@@ -88,7 +95,7 @@ function loadText(filename) {
     xhr.open("GET", filename, false);
     xhr.send(null);
     var list = xhr.responseText.split(/\r\n|\r|\n/);
-    list.pop()
+    list.pop();
 
     return list;
 }
@@ -98,7 +105,7 @@ function makeFileList(method_paths) {
     var files = [];
     for (var i = 0; i < method_paths.length; i++) {
         tmp = loadText(method_paths[i]);
-        files = files.concat(tmp)
+        files = files.concat(tmp);
     }
     files.shuffle();
     return files;
