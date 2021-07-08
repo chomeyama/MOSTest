@@ -1,19 +1,3 @@
-// directory name
-const wav_dir = "wav/";
-
-// invalid enter key
-document.onkeypress = invalid_enter();
-
-// global variables
-var outfile;
-var file_list;
-var scores;
-
-// since loadText() doesn't work in local
-var n = 0;
-var eval = document.getElementsByName("eval");
-
-
 Array.prototype.shuffle = function () {
     var i = this.length;
     while (i) {
@@ -214,3 +198,19 @@ function prev() {
 function finish() {
     exportCSV();
 }
+
+
+// directory name
+const wav_dir = "wav/";
+
+// invalid enter key
+document.onkeypress = invalid_enter();
+
+// global variables
+var outfile;
+var file_list;
+var scores;
+
+// since loadText() doesn't work in local
+var n = 0;
+var eval = document.getElementsByName("eval");
