@@ -48,14 +48,18 @@ function start_experiment() {
         includes different number of methods.
     */
     if (set_num == "1") {
-        method_paths.push(wav_dir + "set" + set_num + "/natural.list");
+        method_paths.push(wav_dir + "set" + set_num + "/method1.list");
+        method_paths.push(wav_dir + "set" + set_num + "/method2.list");
     } else if (set_num == "2") {
-        method_paths.push(wav_dir + "set" + set_num + "/world.list");
-        method_paths.push(wav_dir + "set" + set_num + "/nsf.list");
-    } else if (set_num == "3") {
-        method_paths.push(wav_dir + "set" + set_num + "/qppwg.list");
-        method_paths.push(wav_dir + "set" + set_num + "/usfgan.list");
+        method_paths.push(wav_dir + "set" + set_num + "/method1.list");
+        method_paths.push(wav_dir + "set" + set_num + "/method2.list");
+        method_paths.push(wav_dir + "set" + set_num + "/method3.list");
     }
+    /*
+        or you can write simply as
+    */
+    // method_paths.push(wav_dir + "set" + set_num + "/method1.list");
+    // method_paths.push(wav_dir + "set" + set_num + "/method2.list");
     /*
         end
     */
@@ -119,7 +123,7 @@ function evalCheck() {
         }
     }
     else {
-        eval[c - 1].checked = true;
+        eval[5 - c].checked = true;
     }
 }
 
